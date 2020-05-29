@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      a.list__link {
+        position: relative;
+        text-decoration: none;
+        color: currentColor;
+        overflow: hidden;
+        transition: color 100ms ease-in-out;
+      }
+
+      a.list__link:hover {
+        color: #ffecb3;
+      }
+
+      a.list__link::after {
+        content: "";
+        height: 2px;
+        position: absolute;
+        background-color: currentColor;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 100ms ease-in-out,
+          background-color 100ms ease-in-out;
+      }
+
+      a.list__link:hover::after {
+        background-color: #ffecb3;
+        transform: scaleX(1);
+      }
+
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: #424242;
+        color: #f5f5f5;
+        font-family: "Inconsolata";
+      }
+
+      .list {
+        list-style: none;
+      }
+
+      .content {
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .section__title {
+        margin-bottom: 0.5rem;
+      }
+
+      .list__item {
+        margin-bottom: 0.4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="tech">
+        <h2 class="section__title section__title--tech">tech</h2>
+        <ul class="list list--tech">
+          <li class="list__item list_item--tech">
+            <a href="https://github.com" class="list__link">github</a>
+          </li>
+          <li class="list__item list_item--tech">
+            <a href="https://reddit.com/r/unixporn" class="list__link"
+              >r/unixporn</a
+            >
+          </li>
+          <li class="list__item list_item--tech">
+            <a href="https://github.com/rwithk/archrice" class="list__link"
+              >dots</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="code">
+        <h2 class="section__title section__title--code">code</h2>
+        <ul class="list list--code">
+          <li class="list__item list__item--code">
+            <a href="https://leetcode.com" class="list__link">leetcode</a>
+          </li>
+          <li class="list__item list__item--code">
+            <a href="https://hackerearth.com" class="list__link">hackerearth</a>
+          </li>
+          <li class="list__item list__item--code">
+            <a href="https://hackerrank.com/dashboard" class="list__link"
+              >hackerrank</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="learn">
+        <h2 class="section__title section__title--learn">learn</h2>
+        <ul class="list list--learn">
+          <li class="list__item list__item--misc">
+            <a href="https://coursera.org" class="list__link">coursera</a>
+          </li>
+          <li class="list__item list__item--misc">
+            <a href="https://classroom.google.com/u/2/h" class="list__link"
+              >classroom</a
+            >
+          </li>
+          <li class="list__item list__item--misc">
+            <a href="https://scrimba.com" class="list__link">scrimba</a>
+          </li>
+        </ul>
+      </div>
+      <div class="misc">
+        <h2 class="section__title section__title--misc">misc</h2>
+        <ul class="list list--misc">
+          <li class="list__item list__item--misc">
+            <a href="https://youtube.com" class="list__link">youtube</a>
+          </li>
+          <li class="list__item list__item--misc">
+            <a href="https://web.whatsapp.com" class="list__link">whatsapp</a>
+          </li>
+          <li class="list__item list__item--misc">
+            <a href="https://reddit.com" class="list__link">reddit</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- <script src="main.js"></script> -->
+  </body>
+</html>
